@@ -27,7 +27,7 @@ class RNNModel(nn.Module):
         if tie_weights:
             if nhid != ninp:
                 raise ValueError('When using the tied flag, nhid must be equal to emsize')
-            self.decoder.weight = self.encoder.weight
+            self.decoder.weight = self.encoder.weight#reference, self.decoder.weight is self.encoder.weight
 
         self.init_weights()
 
@@ -37,7 +37,7 @@ class RNNModel(nn.Module):
 
     def init_weights(self):
         initrange = 0.1
-        self.encoder.weight.data.uniform_(-initrange, initrange)
+        self.encoder.weight.data.uniform_(-initrange, initrange)#if tie_weight, will be reassign by decoder
         self.decoder.bias.data.zero_()
         self.decoder.weight.data.uniform_(-initrange, initrange)
 
@@ -45,11 +45,18 @@ class RNNModel(nn.Module):
         emb = self.drop(self.encoder(input))
         output, hidden = self.rnn(emb, hidden)
         output = self.drop(output)
+		#output:shape (seq_len, batch, num_directions * hidden_size):tensor containing
+		#the output features (h_t) from the last layer of the LSTM, for each t.
+		#hidden:h_n of shape (num_layers * num_directions, batch, hidden_size): tensor containing 
+		#the hidden state for t = seq_len.
         decoded = self.decoder(output.view(output.size(0)*output.size(1), output.size(2)))
         return decoded.view(output.size(0), output.size(1), decoded.size(1)), hidden
 
     def init_hidden(self, bsz):
+		#parameter of self.encoder, dropout has not paras.
         weight = next(self.parameters())
+		#Returns a Tensor of size size filled with 0. By default, the returned Tensor has 
+		#the same torch.dtype and torch.device as this tensor.
         if self.rnn_type == 'LSTM':
             return (weight.new_zeros(self.nlayers, bsz, self.nhid),
                     weight.new_zeros(self.nlayers, bsz, self.nhid))
