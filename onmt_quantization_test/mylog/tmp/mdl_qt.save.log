@@ -1,0 +1,976 @@
+Loading checkpoint from /data/nlp/user/lsk/onmt_test/mymodel/tmp/model.zh-en_step_132000.pt
+======lsk======ckpt.keys(): dict_keys(['model', 'generator', 'vocab', 'opt', 'optim'])
+====lsk====print_size_of_key: model
+Size (MB): 902.129826
+====lsk====print_size_of_key: generator
+Size (MB): 114.825158
+====lsk====print_size_of_key: vocab
+Size (MB): 12.101988
+====lsk====print_size_of_key: opt
+Size (MB): 0.003056
+====lsk====print_size_of_key: optim
+Size (MB): 1951.967399
+Loading vocab from checkpoint at /data/nlp/user/lsk/onmt_test/mymodel/tmp/model.zh-en_step_132000.pt.
+ * src vocab size = 10002
+ * tgt vocab size = 28006
+encoder: 85821440
+decoder: 158166374
+* number of parameters: 243987814
+====lsk====model: NMTModel(
+  (encoder): TransformerEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(10002, 1024, padding_idx=1)
+        )
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.3, inplace=False)
+        )
+      )
+    )
+    (transformer): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+    )
+    (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  )
+  (decoder): TransformerDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(28006, 1024, padding_idx=1)
+        )
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.3, inplace=False)
+        )
+      )
+    )
+    (transformer_layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+      (1): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+      (2): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+      (3): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+      (4): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+      (5): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_values): Linear(in_features=1024, out_features=1024, bias=True)
+          (linear_query): Linear(in_features=1024, out_features=1024, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=1024, out_features=4096, bias=True)
+          (w_2): Linear(in_features=4096, out_features=1024, bias=True)
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+    )
+    (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  )
+  (generator): Sequential(
+    (0): Linear(in_features=1024, out_features=28006, bias=True)
+    (1): Cast()
+    (2): LogSoftmax()
+  )
+)
+====lsk====qted_model: NMTModel(
+  (encoder): TransformerEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(10002, 1024, padding_idx=1)
+        )
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.3, inplace=False)
+        )
+      )
+    )
+    (transformer): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+      )
+    )
+    (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  )
+  (decoder): TransformerDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(28006, 1024, padding_idx=1)
+        )
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.3, inplace=False)
+        )
+      )
+    )
+    (transformer_layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+      (1): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+      (2): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+      (3): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+      (4): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+      (5): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.3, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_values): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (linear_query): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): DynamicQuantizedLinear(
+            in_features=1024, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): DynamicQuantizedLinear(
+            in_features=1024, out_features=4096
+            (_packed_params): LinearPackedParams()
+          )
+          (w_2): DynamicQuantizedLinear(
+            in_features=4096, out_features=1024
+            (_packed_params): LinearPackedParams()
+          )
+          (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.3, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.3, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3, inplace=False)
+      )
+    )
+    (layer_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  )
+  (generator): Sequential(
+    (0): DynamicQuantizedLinear(
+      in_features=1024, out_features=28006
+      (_packed_params): LinearPackedParams()
+    )
+    (1): Cast()
+    (2): LogSoftmax()
+  )
+)
+====lsk====print_size_of_model
+Size (MB): 1016.972808
+====lsk====print_size_of_model
+Size (MB): 402.500665
+====lsk====save qted_model only to : /data/nlp/user/lsk/onmt_test/mymodel/tmp/mdl_only.qt.aft
